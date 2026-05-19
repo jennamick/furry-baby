@@ -2,7 +2,7 @@
 A responsive, multi-page website built with HTML5 and CSS3 as part of my web development coursework at St. Petersburg College.
 
 # About the Project
-Furry Baby is a fictional pet-focused website designed to practice core front-end development skills including mobile-first responsive design, semantic HTML structure, and accessible UI layout.
+Furry Baby is a fictional pet boutique focused website designed to practice core front-end development skills including mobile-first responsive design, semantic HTML structure, and accessible UI layout.
 
 # Built With
 - HTML5
