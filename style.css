@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
-    background-color: #f8f1e9;
+    background: linear-gradient(180deg, #f8f1e9 0%, #f5efe9 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,6 +31,10 @@ header {
     padding-top: 1rem;
 }
 
+header h1 {
+    margin: 0;
+}
+
 .velvet-header {
     font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
     font-size: 2.3em;
@@ -39,6 +43,7 @@ header {
     text-align: center;
     display: inline-block;
     text-shadow: -1px -1px 1px #a8b5a2, 1px 1px 1px #f8f1e9;
+    letter-spacing: 0.04em;
 }
 
 header h1 a {
@@ -53,7 +58,9 @@ header h1 a {
 /* Navigation Styles */
 nav {
     background-color: #a8b5a2;
-    box-shadow: 0 0 10px #a8b5a2;
+    box-shadow: 0 0 10px rgba(168, 181, 162, 0.75);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(113, 97, 112, 0.15);
 }
 
 nav ul {
@@ -74,21 +81,26 @@ nav ul li a {
     color: #f8f1ed;
     font-size: 1.3em;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 18px;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     text-align: center;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.95rem;
 }
 
 nav ul li a:hover {
     color: #716170;
-    transform: scale(1.08);
-    border-radius: 6px;
+    transform: translateY(-1px);
+    background: rgba(248, 241, 233, 0.28);
+    box-shadow: inset 0 0 0 1px rgba(113, 97, 112, 0.08);
 }
 
 nav ul li a.active {
     background-color: #716170;
-    opacity: 0.75;
+    opacity: 0.9;
     color: #f8f1e9;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(113, 97, 112, 0.15);
@@ -107,8 +119,8 @@ section {
     padding: 1.25rem 1.5rem 2rem;
     border-bottom: 1px solid #f8f1ed;
     background: linear-gradient(to bottom, #f8f1eb, #fdfdfd);
-    border-radius: 8px;
-    box-shadow: 0 0 10px #f8f1ed;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(168, 181, 162, 0.15);
 }
 
 section:last-child {
@@ -163,29 +175,12 @@ section img {
     height: auto;
 }
 
-.alternative-section {
-    display: flex;
-    justify-content: center;
-}
-
-.alternative-section-header {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.alternative-section-body {
-    padding: 40px;
-    margin-bottom: 40px;
-}
-
 .homepage-header-image {
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
-    margin: 10px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 18px auto 10px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(113, 97, 112, 0.12);
     transition: transform 0.3s ease;
     display: block;
     -webkit-mask-image: radial-gradient(circle at center, black 25%, transparent 90%);
@@ -194,6 +189,40 @@ section img {
     mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     mask-size: cover;
+}
+
+.hero-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero-tagline {
+    font-size: 1.08rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #a8b5a2;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-action {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #a8b5a2, #716170);
+    color: #f8f1e9;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(113, 97, 112, 0.12);
+}
+
+.hero-action:hover {
+    transform: translateY(-1px);
 }
 
 /* FOOTER */
@@ -395,6 +424,10 @@ footer a {
     margin-bottom: 1rem;
 }
 
+.story-card p:last-child {
+    margin-bottom: 0;
+}
+
 /* CONTACT FORM */
 .spacer-element {
     padding-top: 40px;
@@ -492,8 +525,8 @@ footer a {
     }
 
     nav ul li a {
-        font-size: 1em;
-        padding: 8px 6px;
+        font-size: 0.85rem;
+        padding: 10px 12px;
     }
 }
 
